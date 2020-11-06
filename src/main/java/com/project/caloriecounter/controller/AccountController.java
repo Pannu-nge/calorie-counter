@@ -1,8 +1,9 @@
 package com.project.caloriecounter.controller;
 
 import com.project.caloriecounter.model.Account;
-import com.project.caloriecounter.service.AccountService;
+import com.project.caloriecounter.security.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,25 +17,30 @@ public class AccountController {
     private AccountService accountService;
 
     @GetMapping
+    @PreAuthorize("hasRole('ADMIN')")
     public List<Account> getAll(){return accountService.getAll();}
 
-    @GetMapping("{username}")
-    public Account getByUsername(@PathVariable String username){
-        return accountService.getByUsername(username);
+    @GetMapping("{id}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public Account getById(@PathVariable Long id){
+        return accountService.getById(id);
     }
 
     @PostMapping
+    @PreAuthorize("hasRole('ADMIN')")
     public Account create(@RequestBody Account account){
         return accountService.create(account);
     }
 
     @RequestMapping(method = RequestMethod.PUT)
+    @PreAuthorize("hasRole('ADMIN')")
     public Account update(@RequestBody Account account){
         return accountService.update(account);
     }
 
-    @RequestMapping(path = "{delete/username}", method = RequestMethod.DELETE)
-    public void deleteByUsername(@PathVariable String username){
-        accountService.deleteByUsername(username);
+    @RequestMapping(path = "{id}", method = RequestMethod.DELETE)
+    @PreAuthorize("hasRole('ADMIN')")
+    public void deleteById(@PathVariable Long id){
+        accountService.deleteById(id);
     }
 }

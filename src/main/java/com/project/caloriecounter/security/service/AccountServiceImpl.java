@@ -1,11 +1,11 @@
-package com.project.caloriecounter.service;
+package com.project.caloriecounter.security.service;
 
 import com.project.caloriecounter.model.Account;
 import com.project.caloriecounter.repository.AccountRepository;
+import com.project.caloriecounter.repository.PersonRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -15,12 +15,15 @@ public class AccountServiceImpl implements AccountService{
     @Autowired
     private AccountRepository accountRepository;
 
+    @Autowired
+    private PersonRepository personRepository;
+
     @Override
     public List<Account> getAll(){return accountRepository.findAll();}
 
     @Override
-    public Account getByUsername(String username){
-        return accountRepository.getOne(username);
+    public Account getById(Long id){
+        return accountRepository.getOne(id);
     };
 
     @Override
@@ -30,13 +33,15 @@ public class AccountServiceImpl implements AccountService{
 
     @Override
     public Account update(Account account){
-        Account oldAccount = accountRepository.getOne(account.getUsername());
+        Account oldAccount = accountRepository.getOne(account.getId());
         BeanUtils.copyProperties(account, oldAccount);
         return accountRepository.saveAndFlush(oldAccount);
     };
 
     @Override
-    public void deleteByUsername(String username){
-        accountRepository.deleteById(username);
+    public void deleteById(Long id){
+        Account account = accountRepository.getOne(id);
+        accountRepository.deleteById(id);
+        personRepository.deleteByAccount_Person_Id(account.getPerson().getId());
     };
 }

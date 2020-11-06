@@ -1,14 +1,11 @@
 package com.project.caloriecounter.controller;
 
-import com.project.caloriecounter.model.CalorieConsumedId;
 import com.project.caloriecounter.model.DailyCalorieConsumed;
-import com.project.caloriecounter.model.Person;
-import com.project.caloriecounter.repository.DailyCalorieConsumedRepository;
-import com.project.caloriecounter.service.DailyCalorieConsumedService;
+import com.project.caloriecounter.security.service.DailyCalorieConsumedService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -21,15 +18,18 @@ public class DailyCalorieConsumedController {
     private DailyCalorieConsumedService dailyCalorieConsumedService;
 
     @GetMapping
+    @PreAuthorize("hasRole('ADMIN')")
     public List<DailyCalorieConsumed> getAll(){ return dailyCalorieConsumedService.getAll(); }
 
     @GetMapping("person/{personId}")
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     public List<DailyCalorieConsumed> getByPersonId(@PathVariable Long personId){
         return dailyCalorieConsumedService.getByPersonId(personId);
     }
 
     @GetMapping("personAndDate")
-    public List<DailyCalorieConsumed> getByPersonIdAndDate(@RequestBody Map<String, Object> personAndDate){
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+    public DailyCalorieConsumed getByPersonIdAndDate(@RequestBody Map<String, Object> personAndDate){
         return dailyCalorieConsumedService.getByPersonIdAndDate(personAndDate);
     }
 }

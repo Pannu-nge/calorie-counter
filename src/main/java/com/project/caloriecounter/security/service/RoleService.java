@@ -1,4 +1,4 @@
-package com.project.caloriecounter.service;
+package com.project.caloriecounter.security.service;
 
 import com.project.caloriecounter.model.Role;
 

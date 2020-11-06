@@ -31,6 +31,12 @@ public class Person {
     @JsonIgnore
     private java.util.List<MealLog> mealLogs;
 
+    @OneToOne(cascade = CascadeType.REMOVE,
+            fetch = FetchType.LAZY,
+            mappedBy = "person")
+    @JsonIgnore
+    private Account account;
+
     public Long getId() {
         return id;
     }
@@ -71,11 +77,19 @@ public class Person {
         this.age = age;
     }
 
-   public List<MealLog> getMealLogs() {
+    public List<MealLog> getMealLogs() {
         return mealLogs;
     }
 
     public void setMealLogs(List<MealLog> mealLogs) {
         this.mealLogs = mealLogs;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
     }
 }

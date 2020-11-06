@@ -1,10 +1,9 @@
 package com.project.caloriecounter.controller;
 
-import com.project.caloriecounter.model.DailyCalorieConsumed;
 import com.project.caloriecounter.model.DailyCalorieNeeded;
-import com.project.caloriecounter.repository.DailyCalorieNeededRepository;
-import com.project.caloriecounter.service.DailyCalorieNeededService;
+import com.project.caloriecounter.security.service.DailyCalorieNeededService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,9 +17,11 @@ public class DailyCalorieNeededController {
     private DailyCalorieNeededService dailyCalorieNeededService;
 
     @GetMapping
+    @PreAuthorize("hasRole('ADMIN')")
     public List<DailyCalorieNeeded> getAll(){ return dailyCalorieNeededService.getAll(); }
 
     @GetMapping("{personId}")
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
     public DailyCalorieNeeded getByPersonId(@PathVariable Long personId){
         return dailyCalorieNeededService.getByPersonId(personId);
     }

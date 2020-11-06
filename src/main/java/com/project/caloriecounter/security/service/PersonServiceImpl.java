@@ -1,11 +1,10 @@
-package com.project.caloriecounter.service;
+package com.project.caloriecounter.security.service;
 
 import com.project.caloriecounter.model.Person;
 import com.project.caloriecounter.repository.PersonRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,9 +29,6 @@ public class PersonServiceImpl implements PersonService{
         BeanUtils.copyProperties(person, oldPerson, "personId");
         return personRepository.saveAndFlush(oldPerson);
     }
-    @Override
-    public void deleteById(Long personId){
-        personRepository.deleteById(personId);
-    }
+
 
 }

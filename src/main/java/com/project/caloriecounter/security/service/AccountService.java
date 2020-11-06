@@ -1,4 +1,4 @@
-package com.project.caloriecounter.service;
+package com.project.caloriecounter.security.service;
 
 import com.project.caloriecounter.model.Account;
 
@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface AccountService {
     List<Account> getAll();
-    Account getByUsername(String username);
+    Account getById(Long id);
     Account create(Account account);
     Account update(Account account);
-    void deleteByUsername(String username);
+    void deleteById(Long id);
 }

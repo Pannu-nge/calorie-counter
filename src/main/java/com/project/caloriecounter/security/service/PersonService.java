@@ -1,4 +1,4 @@
-package com.project.caloriecounter.service;
+package com.project.caloriecounter.security.service;
 
 import com.project.caloriecounter.model.Person;
 
@@ -9,5 +9,4 @@ public interface PersonService {
     Person getById(Long id);
     Person create(Person person);
     Person update(Person person);
-    void deleteById(Long id);
 }

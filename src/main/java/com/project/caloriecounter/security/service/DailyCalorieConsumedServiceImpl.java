@@ -1,14 +1,11 @@
-package com.project.caloriecounter.service;
+package com.project.caloriecounter.security.service;
 
-import com.project.caloriecounter.model.CalorieConsumedId;
 import com.project.caloriecounter.model.DailyCalorieConsumed;
 import com.project.caloriecounter.repository.DailyCalorieConsumedRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -31,9 +28,9 @@ public class DailyCalorieConsumedServiceImpl implements DailyCalorieConsumedServ
     }
 
     @Override
-    public List<DailyCalorieConsumed> getByPersonIdAndDate(Map<String, Object> personAndDate){
+    public DailyCalorieConsumed getByPersonIdAndDate(Map<String, Object> personAndDate){
         Long personId = Long.parseLong(personAndDate.get("personId").toString());
         LocalDate dateOfMeal = LocalDate.parse(personAndDate.get("dateOfMeal").toString());
-        return dailyCalorieConsumedRepository.findAllByIdPersonIdAndIdDateOfMeal(personId, dateOfMeal);
+        return dailyCalorieConsumedRepository.findByIdPersonIdAndIdDateOfMeal(personId, dateOfMeal);
     }
 }

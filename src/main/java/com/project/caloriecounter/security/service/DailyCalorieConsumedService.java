@@ -1,4 +1,4 @@
-package com.project.caloriecounter.service;
+package com.project.caloriecounter.security.service;
 
 import com.project.caloriecounter.model.DailyCalorieConsumed;
 
@@ -8,5 +8,5 @@ import java.util.Map;
 public interface DailyCalorieConsumedService {
     List<DailyCalorieConsumed> getAll();
     List<DailyCalorieConsumed> getByPersonId(Long personId);
-    List<DailyCalorieConsumed> getByPersonIdAndDate(Map<String, Object> personAndDate);
+    DailyCalorieConsumed getByPersonIdAndDate(Map<String, Object> personAndDate);
 }

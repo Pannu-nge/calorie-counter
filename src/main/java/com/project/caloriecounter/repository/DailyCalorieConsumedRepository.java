@@ -18,7 +18,7 @@ public interface DailyCalorieConsumedRepository extends JpaRepository<DailyCalor
     //@Query(value = "select * from daily_calorie_consumed where person_id = :personId", nativeQuery = true)
     //public List<DailyCalorieConsumed> findByPersonId(@Param("personId") Long personId);
 
-    public List<DailyCalorieConsumed> findAllByIdPersonIdAndIdDateOfMeal(Long personId, LocalDate dateOfMeal);
+    public DailyCalorieConsumed findByIdPersonIdAndIdDateOfMeal(Long personId, LocalDate dateOfMeal);
 
     public List<DailyCalorieConsumed> findAllByIdPersonId(Long personId);
 }

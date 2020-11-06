@@ -1,4 +1,4 @@
-package com.project.caloriecounter.service;
+package com.project.caloriecounter.security.service;
 
 import com.project.caloriecounter.model.MealLog;
 import com.project.caloriecounter.repository.MealLogRepository;
@@ -6,7 +6,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class MealLogServiceImpl implements MealLogService{
@@ -44,5 +46,12 @@ public class MealLogServiceImpl implements MealLogService{
     @Override
     public List<MealLog> getByPersonId(Long personId){
         return mealLogRepository.findByPersonId(personId);
+    }
+
+    @Override
+    public List<MealLog> getByPersonIdAndDate(Map<String, Object> personAndDate){
+        Long personId = Long.parseLong(personAndDate.get("personId").toString());
+        LocalDate dateOfMeal = LocalDate.parse(personAndDate.get("dateOfMeal").toString());
+        return mealLogRepository.findByPersonIdAndDateOfMeal(personId, dateOfMeal);
     }
 }

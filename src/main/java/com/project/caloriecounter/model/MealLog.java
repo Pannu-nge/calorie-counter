@@ -7,7 +7,9 @@ import org.apache.tomcat.jni.Local;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Date;
+import java.util.TimeZone;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -28,6 +30,7 @@ public class MealLog implements Serializable{
     @Column(name = "person_id", nullable = false)
     private Long personId;
     private LocalDate dateOfMeal;
+    private LocalTime timeOfMeal;
     @Enumerated(EnumType.STRING)
     private MealType mealType;
     private Long quantity;
@@ -82,5 +85,13 @@ public class MealLog implements Serializable{
 
     public void setFood(Food food) {
         this.food = food;
+    }
+
+    public LocalTime getTimeOfMeal() {
+        return timeOfMeal;
+    }
+
+    public void setTimeOfMeal(LocalTime timeOfMeal) {
+        this.timeOfMeal = timeOfMeal;
     }
 }
