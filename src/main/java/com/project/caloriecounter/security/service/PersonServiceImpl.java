@@ -26,7 +26,7 @@ public class PersonServiceImpl implements PersonService{
     @Override
     public Person update(Person person){
         Person oldPerson = personRepository.getOne(person.getId());
-        BeanUtils.copyProperties(person, oldPerson, "personId");
+        BeanUtils.copyProperties(person, oldPerson, "id", "mealLogs", "account");
         return personRepository.saveAndFlush(oldPerson);
     }
 

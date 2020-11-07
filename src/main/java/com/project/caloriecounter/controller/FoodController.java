@@ -38,7 +38,7 @@ public class FoodController {
         return foodService.update(food);
     }
 
-    @RequestMapping(path = "delete/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(path = "{id}", method = RequestMethod.DELETE)
     @PreAuthorize("hasRole('ADMIN')")
     public void deleteById(@PathVariable Long id){
         foodService.deleteById(id);

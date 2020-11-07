@@ -26,11 +26,11 @@ public class AccountController {
         return accountService.getById(id);
     }
 
-    @PostMapping
+    /*@PostMapping
     @PreAuthorize("hasRole('ADMIN')")
     public Account create(@RequestBody Account account){
         return accountService.create(account);
-    }
+    }*/
 
     @RequestMapping(method = RequestMethod.PUT)
     @PreAuthorize("hasRole('ADMIN')")

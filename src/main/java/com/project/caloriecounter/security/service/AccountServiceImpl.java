@@ -26,15 +26,15 @@ public class AccountServiceImpl implements AccountService{
         return accountRepository.getOne(id);
     };
 
-    @Override
+    /*@Override
     public Account create(Account account){
         return accountRepository.save(account);
-    };
+    };*/
 
     @Override
     public Account update(Account account){
         Account oldAccount = accountRepository.getOne(account.getId());
-        BeanUtils.copyProperties(account, oldAccount);
+        BeanUtils.copyProperties(account, oldAccount, "id", "password");
         return accountRepository.saveAndFlush(oldAccount);
     };
 

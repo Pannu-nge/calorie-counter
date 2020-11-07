@@ -1,0 +1,87 @@
+-- MySQL dump 10.13  Distrib 8.0.21, for Win64 (x86_64)
+--
+-- Host: localhost    Database: caloriecounter
+-- ------------------------------------------------------
+-- Server version	8.0.21
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Dumping data for table `account`
+--
+
+LOCK TABLES `account` WRITE;
+/*!40000 ALTER TABLE `account` DISABLE KEYS */;
+INSERT INTO `account` VALUES (9,'pannu-user','pannuuser@gmail.com','$2a$10$1JgxS1c42oiTxAPaXnQKHe0wLmiaoOz956yTzC8EN0oOjgCLmtTb.',NULL),(10,'pannu-admin','pannuadmin@gmail.com','$2a$10$xW7H7JJnFfHeO.M9bi.PJeTO/TWvuPVRpIFV96bj9ul2XIdvKx1zy',NULL);
+/*!40000 ALTER TABLE `account` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `account_role`
+--
+
+LOCK TABLES `account_role` WRITE;
+/*!40000 ALTER TABLE `account_role` DISABLE KEYS */;
+INSERT INTO `account_role` VALUES (9,2),(10,1);
+/*!40000 ALTER TABLE `account_role` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `food`
+--
+
+LOCK TABLES `food` WRITE;
+/*!40000 ALTER TABLE `food` DISABLE KEYS */;
+INSERT INTO `food` VALUES (1,'Fried Egg',129),(2,'Rice',250),(3,'Chicken Curry',300),(4,'Mutton Curry',325),(5,'Fish Stew',240);
+/*!40000 ALTER TABLE `food` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `meal_log`
+--
+
+LOCK TABLES `meal_log` WRITE;
+/*!40000 ALTER TABLE `meal_log` DISABLE KEYS */;
+INSERT INTO `meal_log` VALUES (1,1,'2020-10-29','09:15:00','BREAKFAST',1,2),(2,1,'2020-10-29','09:15:00','BREAKFAST',2,1),(3,2,'2020-10-29','12:00:00','LUNCH',2,2),(4,2,'2020-10-29','12:00:00','LUNCH',3,1),(5,2,'2020-10-30','08:00:00','BREAKFAST',4,1),(6,2,'2020-10-30','08:00:00','BREAKFAST',2,2),(7,2,'2020-10-30','20:00:00','DINNER',5,1),(8,2,'2020-10-30','20:00:00','DINNER',2,1);
+/*!40000 ALTER TABLE `meal_log` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `person`
+--
+
+LOCK TABLES `person` WRITE;
+/*!40000 ALTER TABLE `person` DISABLE KEYS */;
+INSERT INTO `person` VALUES (1,'Pannu',110,'FEMALE',21),(2,'Aye Aye',100,'FEMALE',19),(3,'James',130,'MALE',27);
+/*!40000 ALTER TABLE `person` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `role`
+--
+
+LOCK TABLES `role` WRITE;
+/*!40000 ALTER TABLE `role` DISABLE KEYS */;
+INSERT INTO `role` VALUES (1,'ROLE_ADMIN'),(2,'ROLE_USER');
+/*!40000 ALTER TABLE `role` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-11-08  0:00:07

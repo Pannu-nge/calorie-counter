@@ -1,0 +1,981 @@
+{
+	"info": {
+		"_postman_id": "8c4617d7-2d37-4e2f-ae82-79ca9c59781d",
+		"name": "Calorie Counter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS1hZG1pbiIsImlhdCI6MTYwNDc2ODUwNiwiZXhwIjoxNjA0ODkxOTYzfQ.CDZaVMwyM3VK8asp4Lra9haEl5xfWx5AoY2cRikewfXvBm5fR2-Tv2OFI9IaxvBb_UbLiBfWHZpg41osgb_5XA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/account",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY1MjIzLCJleHAiOjE2MDQ4ODg2ODB9.xypShmtRfdAK0oQPF2n6KaT5SLK_f0Il0XZbssiqPKvgYn4TehtbzF198_C3tOwAovmXn0EcuENESs75RT5SSw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/account/9",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"account",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS1hZG1pbiIsImlhdCI6MTYwNDc2ODQ3NywiZXhwIjoxNjA0ODkxOTMzfQ.nCeV5L8ilN_BtoHEuMZWrQjnLXMKP0GvWwEDsuWTqSPcAR6ud_wuBhJ3kTCQI2-nbJmwRdKbuJSKwtjlPGNANQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 20,\r\n    \"username\": \"pannu\",\r\n    \"email\": \"pannu@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/account",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS1hZG1pbiIsImlhdCI6MTYwNDc2ODUwNiwiZXhwIjoxNjA0ODkxOTYzfQ.CDZaVMwyM3VK8asp4Lra9haEl5xfWx5AoY2cRikewfXvBm5fR2-Tv2OFI9IaxvBb_UbLiBfWHZpg41osgb_5XA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/account/20",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"account",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Food",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY1MjIzLCJleHAiOjE2MDQ4ODg2ODB9.xypShmtRfdAK0oQPF2n6KaT5SLK_f0Il0XZbssiqPKvgYn4TehtbzF198_C3tOwAovmXn0EcuENESs75RT5SSw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/food",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"food"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY1MjIzLCJleHAiOjE2MDQ4ODg2ODB9.xypShmtRfdAK0oQPF2n6KaT5SLK_f0Il0XZbssiqPKvgYn4TehtbzF198_C3tOwAovmXn0EcuENESs75RT5SSw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/food/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"food",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS1hZG1pbiIsImlhdCI6MTYwNDc2OTY3MywiZXhwIjoxNjA0ODkzMTMwfQ.Bc2oWFYve3LPbxvwE-KK7RhDWhqk_eWBJ26HzfXfqTnw-QfmyAkhRKuo9ZpdGABVVm8_6L2eA-sgTX0dOqFStA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Yogurt\",\r\n    \"caloriesPerServing\": 70\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/food",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"food"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS1hZG1pbiIsImlhdCI6MTYwNDc2ODUwNiwiZXhwIjoxNjA0ODkxOTYzfQ.CDZaVMwyM3VK8asp4Lra9haEl5xfWx5AoY2cRikewfXvBm5fR2-Tv2OFI9IaxvBb_UbLiBfWHZpg41osgb_5XA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 8,\r\n    \"name\": \"Yogurt\",\r\n    \"caloriesPerServing\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/food",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"food"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS1hZG1pbiIsImlhdCI6MTYwNDc2OTY3MywiZXhwIjoxNjA0ODkzMTMwfQ.Bc2oWFYve3LPbxvwE-KK7RhDWhqk_eWBJ26HzfXfqTnw-QfmyAkhRKuo9ZpdGABVVm8_6L2eA-sgTX0dOqFStA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/food/9",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"food",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY1MjIzLCJleHAiOjE2MDQ4ODg2ODB9.xypShmtRfdAK0oQPF2n6KaT5SLK_f0Il0XZbssiqPKvgYn4TehtbzF198_C3tOwAovmXn0EcuENESs75RT5SSw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/role",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY1MjIzLCJleHAiOjE2MDQ4ODg2ODB9.xypShmtRfdAK0oQPF2n6KaT5SLK_f0Il0XZbssiqPKvgYn4TehtbzF198_C3tOwAovmXn0EcuENESs75RT5SSw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/role/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"role",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS1hZG1pbiIsImlhdCI6MTYwNDc2OTY3MywiZXhwIjoxNjA0ODkzMTMwfQ.Bc2oWFYve3LPbxvwE-KK7RhDWhqk_eWBJ26HzfXfqTnw-QfmyAkhRKuo9ZpdGABVVm8_6L2eA-sgTX0dOqFStA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleType\": \"moderator\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/role",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS1hZG1pbiIsImlhdCI6MTYwNDc2ODUwNiwiZXhwIjoxNjA0ODkxOTYzfQ.CDZaVMwyM3VK8asp4Lra9haEl5xfWx5AoY2cRikewfXvBm5fR2-Tv2OFI9IaxvBb_UbLiBfWHZpg41osgb_5XA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"roleType\": \"mod\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/role",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS1hZG1pbiIsImlhdCI6MTYwNDc2OTY3MywiZXhwIjoxNjA0ODkzMTMwfQ.Bc2oWFYve3LPbxvwE-KK7RhDWhqk_eWBJ26HzfXfqTnw-QfmyAkhRKuo9ZpdGABVVm8_6L2eA-sgTX0dOqFStA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/role/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"role",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Meal Log",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY1MjIzLCJleHAiOjE2MDQ4ODg2ODB9.xypShmtRfdAK0oQPF2n6KaT5SLK_f0Il0XZbssiqPKvgYn4TehtbzF198_C3tOwAovmXn0EcuENESs75RT5SSw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/mealLog",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"mealLog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY2ODIzLCJleHAiOjE2MDQ4OTAyODB9.h827s-q9azpUpeSC1-y4TcNtr__31TdTWc-XNyjETMtmfKrr-nPL9BZPskmFymZn8wCXTS2uGVqfsdxOvKPjLA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/mealLog/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"mealLog",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByPersonId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY2ODIzLCJleHAiOjE2MDQ4OTAyODB9.h827s-q9azpUpeSC1-y4TcNtr__31TdTWc-XNyjETMtmfKrr-nPL9BZPskmFymZn8wCXTS2uGVqfsdxOvKPjLA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/mealLog/person/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"mealLog",
+								"person",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByPersonIdAndDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY3NTQ5LCJleHAiOjE2MDQ4OTEwMDZ9.XUiKmQCiZvFTe0L7cCMXrF_GwOqGSqpsUvVTxJ_eMgYcP6FidgPBuomnEcEyxG9uu_0eVRe2AhpQwRypHSOyXQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"personId\": 2,\r\n    \"dateOfMeal\": \"2020-10-30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/mealLog/personAndDate",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"mealLog",
+								"personAndDate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY3NTQ5LCJleHAiOjE2MDQ4OTEwMDZ9.XUiKmQCiZvFTe0L7cCMXrF_GwOqGSqpsUvVTxJ_eMgYcP6FidgPBuomnEcEyxG9uu_0eVRe2AhpQwRypHSOyXQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"personId\": 1,\r\n    \"dateOfMeal\": \"2020-07-11\",\r\n    \"timeOfMeal\": \"14:00\",\r\n    \"mealType\": \"LUNCH\",\r\n    \"quantity\": 1,\r\n    \"food\":\r\n        {\"id\": 1}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/mealLog",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"mealLog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY3NTQ5LCJleHAiOjE2MDQ4OTEwMDZ9.XUiKmQCiZvFTe0L7cCMXrF_GwOqGSqpsUvVTxJ_eMgYcP6FidgPBuomnEcEyxG9uu_0eVRe2AhpQwRypHSOyXQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 10,\r\n    \"personId\": 1,\r\n    \"dateOfMeal\": \"2020-07-11\",\r\n    \"timeOfMeal\": \"15:00\",\r\n    \"mealType\": \"LUNCH\",\r\n    \"quantity\": 2,\r\n    \"food\":\r\n        {\"id\": 1}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/mealLog",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"mealLog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY3NTQ5LCJleHAiOjE2MDQ4OTEwMDZ9.XUiKmQCiZvFTe0L7cCMXrF_GwOqGSqpsUvVTxJ_eMgYcP6FidgPBuomnEcEyxG9uu_0eVRe2AhpQwRypHSOyXQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/mealLog/10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"mealLog",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Daily Calorie Consumed",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY3NTQ5LCJleHAiOjE2MDQ4OTEwMDZ9.XUiKmQCiZvFTe0L7cCMXrF_GwOqGSqpsUvVTxJ_eMgYcP6FidgPBuomnEcEyxG9uu_0eVRe2AhpQwRypHSOyXQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/calorieConsumed",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"calorieConsumed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByPersonId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY3NTQ5LCJleHAiOjE2MDQ4OTEwMDZ9.XUiKmQCiZvFTe0L7cCMXrF_GwOqGSqpsUvVTxJ_eMgYcP6FidgPBuomnEcEyxG9uu_0eVRe2AhpQwRypHSOyXQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/calorieConsumed/person/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"calorieConsumed",
+								"person",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByPersonIdAndDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY3NTQ5LCJleHAiOjE2MDQ4OTEwMDZ9.XUiKmQCiZvFTe0L7cCMXrF_GwOqGSqpsUvVTxJ_eMgYcP6FidgPBuomnEcEyxG9uu_0eVRe2AhpQwRypHSOyXQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"personId\": 2,\r\n    \"dateOfMeal\": \"2020-10-30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/calorieConsumed/personAndDate",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"calorieConsumed",
+								"personAndDate"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Daily Calorie Needed",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY3NTQ5LCJleHAiOjE2MDQ4OTEwMDZ9.XUiKmQCiZvFTe0L7cCMXrF_GwOqGSqpsUvVTxJ_eMgYcP6FidgPBuomnEcEyxG9uu_0eVRe2AhpQwRypHSOyXQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/calorieNeeded",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"calorieNeeded"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY3NTQ5LCJleHAiOjE2MDQ4OTEwMDZ9.XUiKmQCiZvFTe0L7cCMXrF_GwOqGSqpsUvVTxJ_eMgYcP6FidgPBuomnEcEyxG9uu_0eVRe2AhpQwRypHSOyXQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/calorieNeeded/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"calorieNeeded",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY3NTQ5LCJleHAiOjE2MDQ4OTEwMDZ9.XUiKmQCiZvFTe0L7cCMXrF_GwOqGSqpsUvVTxJ_eMgYcP6FidgPBuomnEcEyxG9uu_0eVRe2AhpQwRypHSOyXQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/person",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY3NTQ5LCJleHAiOjE2MDQ4OTEwMDZ9.XUiKmQCiZvFTe0L7cCMXrF_GwOqGSqpsUvVTxJ_eMgYcP6FidgPBuomnEcEyxG9uu_0eVRe2AhpQwRypHSOyXQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/person/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"person",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY5Nzk1LCJleHAiOjE2MDQ4OTMyNTF9.NC9xPcWalwhO44GwiM40iCrgZaKsNd6Jctms9ktArl4df2jigYE_gHPTYy4Wqu_bup8nmjnf7jNaHVfeECeUrA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Joey\",\r\n    \"weight\": 180,\r\n    \"gender\": \"MALE\",\r\n    \"age\": 30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/person",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYW5udS11c2VyIiwiaWF0IjoxNjA0NzY5Nzk1LCJleHAiOjE2MDQ4OTMyNTF9.NC9xPcWalwhO44GwiM40iCrgZaKsNd6Jctms9ktArl4df2jigYE_gHPTYy4Wqu_bup8nmjnf7jNaHVfeECeUrA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 8,\r\n    \"name\": \"Joey\",\r\n    \"weight\": 195,\r\n    \"gender\": \"MALE\",\r\n    \"age\": 35\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/person",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Signin as User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"username\": \"pannu-user\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/signin",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signin as Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"username\": \"pannu-admin\",\r\n    \"password\": \"654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/signin",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup as User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"username\": \"user\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"1234\",\r\n    \"role\": [\"user\"]  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/signup",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup as Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"username\": \"user\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"1234\",\r\n    \"role\": [\"admin\"]  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/signup",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

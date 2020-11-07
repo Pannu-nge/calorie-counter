@@ -39,7 +39,7 @@ public class MealLogController {
         return mealLogService.update(mealLog);
     }
 
-    @RequestMapping(path = "delete/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(path = "{id}", method = RequestMethod.DELETE)
     @PreAuthorize("hasRole('USER')")
     public void deleteById(@PathVariable Long id){
         mealLogService.deleteById(id);
